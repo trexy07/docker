@@ -7,8 +7,13 @@ const express = require("express")
 const app = express()
 
 
+app.get("/joke1", (req, res, next) => {
+    res.send("Why did the chicken cross the road?");
+});
 
-app.use(express.static("static/"));
+
+
+
 
 // Handling GET /hello request
 app.get("/hello", (req, res, next) => {
@@ -16,11 +21,13 @@ app.get("/hello", (req, res, next) => {
 })
 
 app.get('*', function(req, res){
-  // res.status(404).send('u got a 404');
-  res.status(404).sendFile('static/404.html', { root : __dirname});
-  
-
+  res.status(404).send('u got a 404');
+  // res.status(404).sendFile('static/404.html', { root : __dirname});
 });
+
+
+
+
 
 // Server setup
 app.listen(3000, () => {

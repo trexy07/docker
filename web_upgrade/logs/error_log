@@ -1,0 +1,14 @@
+[Fri Aug 30 15:32:34.094474 2024] [core:crit] [pid 1:tid 1] AH00136: Server MUST relinquish startup privileges before accepting connections.  Please ensure mod_unixd or other system security module is loaded.
+AH00016: Configuration Failed
+[Fri Aug 30 15:33:02.259434 2024] [core:crit] [pid 1:tid 1] AH00136: Server MUST relinquish startup privileges before accepting connections.  Please ensure mod_unixd or other system security module is loaded.
+AH00016: Configuration Failed
+[Fri Aug 30 15:34:37.045871 2024] [ssl:warn] [pid 1:tid 1] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+[Fri Aug 30 15:34:37.049222 2024] [mpm_event:notice] [pid 1:tid 1] AH00489: Apache/2.4.62 (Unix) OpenSSL/3.0.13 configured -- resuming normal operations
+[Fri Aug 30 15:34:37.049259 2024] [core:notice] [pid 1:tid 1] AH00094: Command line: 'httpd -D FOREGROUND'
+[Fri Aug 30 15:34:37.049395 2024] [unixd:alert] [pid 8:tid 8] AH02155: getpwuid: couldn't determine user name from uid 4294967295, you probably need to modify the User directive
+[Fri Aug 30 15:34:37.049638 2024] [unixd:alert] [pid 9:tid 9] AH02155: getpwuid: couldn't determine user name from uid 4294967295, you probably need to modify the User directive
+[Fri Aug 30 15:34:37.050050 2024] [unixd:alert] [pid 10:tid 10] AH02155: getpwuid: couldn't determine user name from uid 4294967295, you probably need to modify the User directive
+[Fri Aug 30 15:37:54.114281 2024] [mpm_event:notice] [pid 1:tid 1] AH00492: caught SIGWINCH, shutting down gracefully
+[Fri Aug 30 15:37:58.411382 2024] [ssl:warn] [pid 1:tid 1] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+[Fri Aug 30 15:37:58.414513 2024] [mpm_event:notice] [pid 1:tid 1] AH00489: Apache/2.4.62 (Unix) OpenSSL/3.0.13 configured -- resuming normal operations
+[Fri Aug 30 15:37:58.414553 2024] [core:notice] [pid 1:tid 1] AH00094: Command line: 'httpd -D FOREGROUND'
