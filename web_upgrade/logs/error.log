@@ -1,0 +1,13 @@
+[Wed Sep 04 18:53:30.207824 2024] [proxy:error] [pid 10:tid 23] (111)Connection refused: AH00957: http: attempt to connect to 127.0.0.1:3000 (127.0.0.1:3000) failed
+[Wed Sep 04 18:53:30.207940 2024] [proxy_http:error] [pid 10:tid 23] [client 12.9.54.246:26193] AH01114: HTTP: failed to make connection to backend: 127.0.0.1
+[Wed Sep 04 18:57:01.296438 2024] [proxy:error] [pid 10:tid 23] (EAI 2)Name or service not known: [client 12.9.54.246:32992] AH00898: DNS lookup failure for: node returned by /hello
+[Wed Sep 04 18:57:45.733359 2024] [proxy:error] [pid 10:tid 65] (EAI 2)Name or service not known: [client 12.9.54.246:52364] AH00898: DNS lookup failure for: node_app returned by /hello
+[Thu Sep 05 09:39:33.361679 2024] [core:error] [pid 92:tid 116] [client 103.186.161.60:50002] AH10244: invalid URI path (/cgi-bin/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/bin/sh)
+[Thu Sep 05 09:39:34.393774 2024] [core:error] [pid 8:tid 55] [client 103.186.161.60:50010] AH10244: invalid URI path (/cgi-bin/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/bin/sh)
+[Thu Sep 05 14:31:44.341021 2024] [proxy:error] [pid 10:tid 21] (EAI 2)Name or service not known: [client 12.9.54.246:51275] AH00898: DNS lookup failure for: node returned by /hello
+[Thu Sep 05 14:32:22.506179 2024] [proxy:error] [pid 8:tid 13] (111)Connection refused: AH00957: http: attempt to connect to 127.0.0.1:3000 (127.0.0.1:3000) failed
+[Thu Sep 05 14:32:22.506385 2024] [proxy_http:error] [pid 8:tid 13] [client 12.9.54.246:51282] AH01114: HTTP: failed to make connection to backend: 127.0.0.1
+[Thu Sep 05 14:35:17.307448 2024] [proxy:error] [pid 10:tid 17] (EAI 2)Name or service not known: [client 12.9.54.246:35768] AH00898: DNS lookup failure for: node:3000hello returned by /hello
+[Thu Sep 05 14:35:31.102116 2024] [proxy:error] [pid 9:tid 14] (EAI 2)Name or service not known: [client 12.9.54.246:51390] AH00898: DNS lookup failure for: node:3000hello returned by /hello
+[Thu Sep 05 14:36:30.870391 2024] [proxy:error] [pid 8:tid 12] (EAI 2)Name or service not known: [client 12.9.54.246:25936] AH00898: DNS lookup failure for: node returned by /hello2
+[Thu Sep 05 14:36:32.245771 2024] [proxy:error] [pid 9:tid 16] (EAI 2)Name or service not known: [client 12.9.54.246:51396] AH00898: DNS lookup failure for: node returned by /hello

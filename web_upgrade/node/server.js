@@ -12,6 +12,9 @@ app.get("/joke1", (req, res, next) => {
 });
 
 
+app.get("/", (req, res, next) => {
+    res.send("nothing here");
+});
 
 
 
@@ -21,7 +24,8 @@ app.get("/hello", (req, res, next) => {
 })
 
 app.get('*', function(req, res){
-  res.status(404).send('u got a 404');
+    res.status(404).send('node dont know this path :('+req.url);
+    
   // res.status(404).sendFile('static/404.html', { root : __dirname});
 });
 

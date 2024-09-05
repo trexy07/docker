@@ -1,7 +1,7 @@
 services:
-  node_app:
+  node:
     image: node
-    container_name: node_app
+    container_name: node
     ports:
       - "3000:3000"
     volumes:
@@ -22,7 +22,8 @@ services:
       - ./certs:/etc/letsencrypt
       - ./httpd.conf:/usr/local/apache2/conf/httpd.conf
       - ./logs:/usr/local/apache2/logs
-
+    depends_on:
+      - node
 
   mysql_db:
     image: mysql:latest
