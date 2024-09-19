@@ -18,20 +18,36 @@ services:
       - "80:80"
       - "443:443"
     volumes:
-      - ./public-html:/usr/local/apache2/htdocs/
+      - ./public:/usr/local/apache2/htdocs/
       - ./certs:/etc/letsencrypt
       - ./httpd.conf:/usr/local/apache2/conf/httpd.conf
       - ./logs:/usr/local/apache2/logs
     depends_on:
       - node
+      - chemical
 
   mysql_db:
     image: mysql:latest
     container_name: mysql_db
-    environment:
-      MYSQL_ROOT_PASSWORD: rootpassword
-      MYSQL_DATABASE: mydatabase
-      MYSQL_USER: user
-      MYSQL_PASSWORD: password
+    env_file:
+      - ./mysql.env
+    # environment:
+    #   MYSQL_ROOT_PASSWORD: rootpassword
+    #   MYSQL_DATABASE: mydatabase
+    #   MYSQL_USER: user
+    #   MYSQL_PASSWORD: password
     ports:
       - "3306:3306"
+  
+  chemical:
+    image: node
+    container_name: chemical
+    ports:
+      - "7011:7011"
+    volumes:
+      - ./basic-example:/usr/src/app
+    working_dir: /usr/src/app
+    # command: npx nodemon index.js
+    command: node index.js
+    
+    
