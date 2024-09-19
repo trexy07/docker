@@ -1,3 +1,5 @@
-node/package-lock.json
 node_modules
 test_app
+web_upgrade/mysql.env
+web_upgrade/logs/
+web_upgrade/node/package-lock.json
