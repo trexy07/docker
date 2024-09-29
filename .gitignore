@@ -4,3 +4,5 @@ web_upgrade/mysql.env
 web_upgrade/logs/
 web_upgrade/node/package-lock.json
 web_upgrade/database
+minecraft/data
+minecraft/world
