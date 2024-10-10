@@ -47,7 +47,7 @@ services:
     ports:
       - "7011:7011"
     volumes:
-      - ./basic-example:/usr/src/app
+      - ./fancy-example:/usr/src/app
     working_dir: /usr/src/app
     # command: npx nodemon index.js
     command: node index.js
