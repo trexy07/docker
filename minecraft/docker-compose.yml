@@ -2,6 +2,7 @@
 #./world is an unzip of the copied world
 # it is copied to the empty dir of ./data/wolrd on first run
 # probably not needed for continual use
+# rcon-cli --host  localhost --password 14b3811a7dc96a0f1e9ea2a2
 services:
   mc:
     image: itzg/minecraft-server
@@ -17,3 +18,4 @@ services:
       EULA: "TRUE"
       WORLD: /worlds/world
       # FORCE_WORLD_COPY: "true"
+    user: "root:root" # probably not goof, but fixes the file permision isue with player data
