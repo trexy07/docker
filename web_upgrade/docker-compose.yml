@@ -12,7 +12,8 @@ services:
       - mysql_db
 
   apache:
-    image: httpd:latest
+    # image: httpd:latest
+    image: owasp/modsecurity-crs:apache
     container_name: apache
     ports:
       - "80:80"
@@ -20,11 +21,14 @@ services:
     volumes:
       - ./public:/usr/local/apache2/htdocs/
       - ./certs:/etc/letsencrypt
+      # - ./certs/live/trevinspi.freeddns.org/fullchain.2.pem:/etc/letsencrypt/live/trevinspi.freeddns.org/fullchain.2.pem
       - ./httpd.conf:/usr/local/apache2/conf/httpd.conf
       - ./logs:/usr/local/apache2/logs
     depends_on:
       - node
       - chemical
+    user: root # can't run as default owner (999), can't run as cert owner (1001)
+
 
   mysql_db:
     image: mysql:latest
@@ -49,7 +53,7 @@ services:
     volumes:
       - ./fancy-example:/usr/src/app
     working_dir: /usr/src/app
-    # command: npx nodemon index.js
-    command: node index.js
+    command: npx nodemon index.js
+    # command: node index.js
     
     
